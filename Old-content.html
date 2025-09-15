@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OLD DELETED CONTENT/SECTION</title>
+
+    <style>
+        /* FAQ */
+        #faq {
+            background-color: var(--color-bg-gray);
+        }
+
+        .faq-grid {
+            max-width: 1296px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 536px 1fr;
+            gap: 24px;
+            align-items: flex-start;
+        }
+
+        .faq-intro {
+            display: flex;
+            flex-direction: column;
+            gap: 60px;
+            align-items: flex-start;
+        }
+
+        .faq-intro h2 {
+            font-size: 48px;
+            font-weight: 600;
+            line-height: 56px;
+            margin: 0;
+        }
+
+        .faq-intro p {
+            font-size: 14px;
+            line-height: 20px;
+            margin: 0;
+            max-width: 427px;
+        }
+
+        .faq-accordion {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .faq-item {
+            border-radius: 12px;
+            padding: 24px;
+        }
+
+        .faq-item.open {
+            background-color: var(--color-light);
+        }
+
+        .faq-item:not(.open) {
+            background-color: #f5f5f5;
+            border: 1px solid var(--color-border-gray);
+        }
+
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 32px;
+            cursor: pointer;
+        }
+
+        .faq-toggle {
+            background-color: transparent;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        .faq-item.open .faq-toggle {
+            background-color: var(--color-primary);
+        }
+
+        .faq-item:not(.open) .faq-toggle {
+            background-color: #f5f5f5;
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            font-size: 16px;
+            line-height: 24px;
+            margin-top: 12px;
+            max-width: 712px;
+        }
+
+        /* CTA */
+        #cta {
+            background-color: var(--color-bg-gray);
+            padding-top: 0;
+            padding-bottom: 40px;
+        }
+
+        .cta-wrapper {
+            background-color: var(--color-primary);
+            border-radius: 12px;
+            position: relative;
+            overflow: hidden;
+            height: 445px;
+            display: flex;
+            align-items: center;
+        }
+
+        .cta-bg-shape {
+            position: absolute;
+            left: -19px;
+            top: -85px;
+            width: 530px;
+            height: 529px;
+        }
+
+        .cta-image-1 {
+            position: absolute;
+            right: 283px;
+            top: -83px;
+            width: 319px;
+            height: 528px;
+            box-shadow: -36px 4px 40px 0px rgba(0, 0, 0, 0.25);
+        }
+
+        .cta-image-2 {
+            position: absolute;
+            right: -11px;
+            top: -83px;
+            width: 286px;
+            height: 494px;
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 1;
+            margin-left: 46px;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            max-width: 716px;
+        }
+
+        .cta-content h2 {
+            font-size: 48px;
+            font-weight: 600;
+            line-height: 56px;
+            color: var(--color-light);
+            margin: 0;
+        }
+
+        .subscribe-form {
+            background-color: var(--color-light);
+            border: 0.5px solid var(--color-light);
+            border-radius: 56px;
+            padding: 4px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 427px;
+        }
+
+        .subscribe-form input {
+            border: none;
+            background: transparent;
+            outline: none;
+            padding: 0 20px;
+            font-size: 14px;
+            color: var(--color-text-gray);
+            flex-grow: 1;
+        }
+
+        .subscribe-form button {
+            background-color: var(--color-dark);
+            color: var(--color-light);
+            border: none;
+            border-radius: 32px;
+            padding: 12px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            min-width: 129px;
+        }
+
+        .subscribe-form button:hover {
+            background-color: var(--color-primary-light);
+            transition: all 0.3s ease-in-out;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- FAQ AND CTA -->
+
+    <!-- FAQ -->
+    <section id="faq" class="section-container">
+        <div class="faq-grid">
+            <div class="faq-intro">
+                <h2>Frequently Asked Questions About Our Services</h2>
+                <p>Find answers to common queries regarding SDF renovation and plumbing services we offer.</p>
+                <a href="#" class="button button-primary">
+                    <span>See All Faq</span>
+                    <span class="button-icon">
+                        <img src="images/arrow-white.svg" alt="arrow icon">
+                    </span>
+                </a>
+            </div>
+            <div class="faq-accordion">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How do I know if I need plumbing repairs?</span>
+                        <button class="faq-toggle"><img src="images/faq-arrow.png" alt="toggle icon"></button>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Are your services available for emergency plumbing needs?</span>
+                        <button class="faq-toggle"><img src="images/faq-arrow.png" alt="toggle icon"></button>
+                    </div>
+                </div>
+                <div class="faq-item open">
+                    <div class="faq-question">
+                        <span>What types of SDF renovation services do you offer?</span>
+                        <button class="faq-toggle"><img src="images/faq-arrow.png" alt="toggle icon"></button>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We offer a wide range of SDF renovation services, including kitchen and bathroom remodels,
+                            full
+                            home SDF renovations, and space optimizations, tailored to your specific needs and
+                            preferences.
+                        </p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Do you offer free estimates for SDF renovation projects?</span>
+                        <button class="faq-toggle"><img src="images/faq-arrow.png" alt="toggle icon"></button>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Are your services covered by a warranty?</span>
+                        <button class="faq-toggle"><img src="images/faq-arrow.png" alt="toggle icon"></button>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How long does a SDF renovation project typically take?</span>
+                        <button class="faq-toggle"><img src="images/faq-arrow.png" alt="toggle icon"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="cta" class="section-container-dark">
+        <div class="cta-wrapper">
+            <img src="images/cta-bg-shape.svg" alt="" class="cta-bg-shape">
+            <img src="images/City buildings.png" alt="City buildings" class="cta-image-1">
+            <img src="images/Modern building.png" alt="Modern building" class="cta-image-2">
+            <div class="cta-content">
+                <h2>Reliable SDF renovation and Plumbing Services You Trust</h2>
+                <form class="subscribe-form">
+                    <input type="email" placeholder="Enter your Email Address">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

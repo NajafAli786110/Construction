@@ -14,16 +14,39 @@
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
+    <!-- Lottie CDN -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+    <!-- Google Font tag -->
     <link
         href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500&display=swap"
         rel="stylesheet">
+
+    <!-- Style links -->
     <link rel="stylesheet" href="global.css">
     <link rel="stylesheet" href="heroStyle.css">
+    <link rel="stylesheet" href="animation.css">
+
+    <!-- Web Script link -->
     <script src="global.js" defer></script>
 </head>
 
 <body>
+    <div class="preloader" id="preloader">
+        <div class="company-name">S D F</div>
 
+        <div class="animation-container">
+            <div class="rotating-border"></div>
+            <div class="lottie-animation">
+                <!-- Lottie Construction Tools Animation -->
+                <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_fgkea2c6.json"
+                    background="transparent" speed="1" loop autoplay>
+                </lottie-player>
+            </div>
+        </div>
+
+        <div class="loading-text">Site is loading...</div>
+    </div>
     <!-- Hero Section -->
     <section id="hero">
         <div class="hero-wrapper">
@@ -707,6 +730,17 @@
                     prevEl: '.carousel-arrow.testimonial-prev',
                 },
             });
+
+            const preloader = document.getElementById('preloader');
+            const content = document.getElementById('content');
+
+            setTimeout(() => {
+                preloader.style.opacity = '0';
+                setTimeout(() => {
+                    preloader.style.display = 'none';
+                    content.style.display = 'block';
+                }, 500);
+            }, 3000);
         });
     </script>
 
